@@ -16,8 +16,8 @@ msg['From'] = sender_email_id
 msg['To']= ', '.join(receiver_email_id)
 msg['Subject']= subject
 # email body/text/message to be displayed
-body = "Hi guys, I am sorry for disturbing you, but this email was sent as part of an exercise\n"
-body = body + "I hope you have a good day further."
+body = "Hi guys,\n I am sorry for disturbing you, but this email was sent as part of an exercise.\n"
+body = body + "\nI hope you have a good day further."
 msg.attach(MIMEText(body, 'plain'))
 text = msg.as_string()
 # start TLS for security
