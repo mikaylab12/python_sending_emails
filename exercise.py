@@ -6,14 +6,14 @@ from email.mime.multipart import MIMEMultipart
 
 s = smtplib.SMTP('smtp.gmail.com', 587)
 sender_email_id = 'mikaylabeelders@gmail.com'
-receiver_email_id = 'thapelo@lifechoices.co.za, tashwilla27@gmail.com, godwin@lifechoices.co.za, mikayla@trade245.com, lizzystrachan99@gmail.com'
+receiver_email_id = ['thapelo@lifechoices.co.za', 'tashwilla27@gmail.com', 'godwin@lifechoices.co.za', 'mikayla@trade245.com', 'lizzystrachan99@gmail.com']
 # enter sender's password
 password = input("Enter your password: ")
 # subject of email
 subject= "Greetings"
 msg = MIMEMultipart()
 msg['From'] = sender_email_id
-msg['To']= receiver_email_id
+msg['To']= ', '.join(receiver_email_id)
 msg['Subject']= subject
 # email body/text/message to be displayed
 body = "Hi guys, I am sorry for disturbing you, but this email was sent as part of an exercise\n"
